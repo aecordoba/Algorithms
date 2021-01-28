@@ -6,5 +6,7 @@
     - Recursive quick sort algorithm
     
 - Array search:
-    - Recursive binary search
+    - Recursive binary search algorithm
 
+- Fibonacci series:
+	 - Recursive Fibonacci numbers generator algorithm
