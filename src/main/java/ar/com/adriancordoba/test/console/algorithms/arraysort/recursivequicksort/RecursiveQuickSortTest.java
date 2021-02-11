@@ -22,6 +22,7 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.recursivequicksort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
 import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
 
 /**
@@ -32,11 +33,7 @@ public class RecursiveQuickSortTest {
 	private static final int ARRAY_SIZE = 10;
 	private static final int VALUES_LIMIT = 1000;
 
-	private enum Order {
-		DESCENDING, ASCENDING
-	}
-
-	private static Order sortOrder = Order.ASCENDING;
+	private static SortOrder sortOrder;
 
 	/**
 	 * Gets an array with random values, and sort it.
@@ -49,9 +46,10 @@ public class RecursiveQuickSortTest {
 		System.out.println("Generated array:");
 		Utilities.printArray(array);
 
+		sortOrder = Utilities.getSortOrder();
 		recursiveQuickSort(array, 0, array.length - 1);
 
-		System.out.println(sortOrder + " sorted array:");
+		System.out.println(sortOrder.getDescription() + " sorted array:");
 		Utilities.printArray(array);
 	}
 
@@ -65,10 +63,10 @@ public class RecursiveQuickSortTest {
 		if (start < end) {
 			int partitionIndex = 0;
 			switch (sortOrder) {
-				case ASCENDING:
+				case ASC:
 					partitionIndex = ascendingArrayPartitioner(array, start, end);
 					break;
-				case DESCENDING:
+				case DES:
 					partitionIndex = descendingArrayPartitioner(array, start, end);
 					break;
 			}

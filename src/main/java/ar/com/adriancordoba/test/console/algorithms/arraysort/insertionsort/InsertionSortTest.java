@@ -22,6 +22,7 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.insertionsort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
 import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
 
 /**
@@ -32,11 +33,7 @@ public class InsertionSortTest {
 	private static final int ARRAY_SIZE = 10;
 	private static final int VALUES_LIMIT = 1000;
 
-	private enum Order {
-		DESCENDING, ASCENDING
-	}
-
-	private static Order sortOrder = Order.DESCENDING;
+	private static SortOrder sortOrder;
 
 	/**
 	 * Gets an array with random values, and sort it.
@@ -49,16 +46,17 @@ public class InsertionSortTest {
 		System.out.println("Generated array:");
 		Utilities.printArray(array);
 
+		sortOrder = Utilities.getSortOrder();
 		switch (sortOrder) {
-			case ASCENDING:
+			case ASC:
 				ascendingInsertionSort(array);
 				break;
-			case DESCENDING:
+			case DES:
 				descendingInsertionSort(array);
 				break;
 		}
 
-		System.out.println(sortOrder + " sorted array:");
+		System.out.println(sortOrder.getDescription() + " sorted array:");
 		Utilities.printArray(array);
 	}
 

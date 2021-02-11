@@ -47,10 +47,7 @@ public class RecursiveBinarySearchTest {
 		System.out.println("Generated and sorted array:");
 		Utilities.printArray(array);
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Input the element to search: ");
-		int searchKey = Integer.parseInt(scanner.nextLine());
-		scanner.close();
+		int searchKey = Utilities.getSearchKey();
 
 		int position = recursiveBinarySearch(array, 0, array.length - 1, searchKey);
 		if (position != -1)

@@ -22,13 +22,15 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.common;
 
+import java.util.Scanner;
+
 /**
  * Define the utilities methods for algorithms.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
  */
 public class Utilities {
 	/**
-	 * Generate an array or random integers.
+	 * Generate an array of random integers.
 	 * @param size Array size.
 	 * @param limit Value limit for elements.
 	 * @return
@@ -39,6 +41,37 @@ public class Utilities {
 			array[i] = (int) (Math.random() * limit);
 		return array;
 	}
+
+	/**
+	 * Gets the sort order from the user.
+	 * @return The sort order.
+	 */
+	public static SortOrder getSortOrder() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the sort order ('ASC' or 'DES'): ");
+		String order = scanner.nextLine();
+		while (!order.equals("ASC") && !order.equals("DES")) {
+			System.out.print("Enter a valid sort order ('ASC' or 'DES'): ");
+			order = scanner.nextLine();
+		}
+		scanner.close();
+		System.out.println();
+		return SortOrder.valueOf(order);
+	}
+
+	/**
+	 * Gets the search key from the user.
+	 * @return The search key.
+	 */
+	public static int getSearchKey() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the element to search: ");
+		int searchKey = Integer.parseInt(scanner.nextLine());
+		scanner.close();
+		System.out.println();
+		return searchKey;
+	}
+
 	/**
 	 * Print an array.
 	 * @param array Array to print.

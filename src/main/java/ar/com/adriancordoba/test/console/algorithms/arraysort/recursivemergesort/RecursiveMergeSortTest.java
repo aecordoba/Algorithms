@@ -22,6 +22,7 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.recursivemergesort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
 import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
 
 /**
@@ -32,11 +33,7 @@ public class RecursiveMergeSortTest {
 	private static final int ARRAY_SIZE = 10;
 	private static final int VALUES_LIMIT = 1000;
 
-	private enum Order {
-		DESCENDING, ASCENDING
-	}
-
-	private static Order sortOrder = Order.DESCENDING;
+	private static SortOrder sortOrder;
 
 	/**
 	 * Gets an array with random values, and sort it.
@@ -49,9 +46,10 @@ public class RecursiveMergeSortTest {
 		System.out.println("Generated array:");
 		Utilities.printArray(array);
 
+		sortOrder = Utilities.getSortOrder();
 		recursiveMergeSort(array, 0, array.length - 1);
 
-		System.out.println(sortOrder + " sorted array:");
+		System.out.println(sortOrder.getDescription() + " sorted array:");
 		Utilities.printArray(array);
 	}
 
@@ -67,10 +65,10 @@ public class RecursiveMergeSortTest {
 			recursiveMergeSort(array, low, middle);
 			recursiveMergeSort(array, middle + 1, high);
 			switch (sortOrder) {
-				case ASCENDING:
+				case ASC:
 					ascendingMerge(array, low, middle, high);
 					break;
-				case DESCENDING:
+				case DES:
 					descendingMerge(array, low, middle, high);
 					break;
 			}
