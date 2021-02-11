@@ -22,6 +22,8 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.recursivequicksort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+
 /**
  * Recursive quick sort algorithm test.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
@@ -37,23 +39,20 @@ public class RecursiveQuickSortTest {
 	private static Order sortOrder = Order.ASCENDING;
 
 	/**
-	 * Generate an array with random values, and sort it.
+	 * Gets an array with random values, and sort it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] array = new int[ARRAY_SIZE];
-
-		for (int i = 0; i < array.length; i++)
-			array[i] = (int) (Math.random() * VALUES_LIMIT);
+		int[] array = Utilities.generateArray(ARRAY_SIZE, VALUES_LIMIT);
 
 		System.out.println("RECURSIVE QUICK SORT");
 		System.out.println("Generated array:");
-		printArray(array);
+		Utilities.printArray(array);
 
 		recursiveQuickSort(array, 0, array.length - 1);
 
 		System.out.println(sortOrder + " sorted array:");
-		printArray(array);
+		Utilities.printArray(array);
 	}
 
 	/**
@@ -128,15 +127,5 @@ public class RecursiveQuickSortTest {
 		int aux = array[index1];
 		array[index1] = array[index2];
 		array[index2] = aux;
-	}
-
-	/**
-	 * Print an array.
-	 * @param array Array to print.
-	 */
-	private static void printArray(int[] array) {
-		for (int i = 0; i < array.length; i++)
-			System.out.format("%5d", array[i]);
-		System.out.println();
 	}
 }

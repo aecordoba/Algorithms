@@ -22,6 +22,8 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.selectionsort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+
 /**
  * Selection sort algorithm test.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
@@ -37,18 +39,15 @@ public class SelectionSortTest {
 	private static Order sortOrder = Order.DESCENDING;
 
 	/**
-	 * Generate an array with random values, and sort it.
+	 * Gets an array with random values, and sort it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] array = new int[ARRAY_SIZE];
-
-		for (int i = 0; i < array.length; i++)
-			array[i] = (int) (Math.random() * VALUES_LIMIT);
+		int[] array = Utilities.generateArray(ARRAY_SIZE, VALUES_LIMIT);
 
 		System.out.println("SELECTION SORT");
 		System.out.println("Generated array:");
-		printArray(array);
+		Utilities.printArray(array);
 
 		switch (sortOrder) {
 			case ASCENDING:
@@ -60,11 +59,11 @@ public class SelectionSortTest {
 		}
 
 		System.out.println(sortOrder + " sorted array:");
-		printArray(array);
+		Utilities.printArray(array);
 	}
 
 	/**
-	 * Ascending selection sort algorithm.
+	 * Ascending selection sort algorithm. O(n²)
 	 * @param array Array to sort.
 	 */
 	private static void ascendingSelectionSort(int[] array) {
@@ -77,7 +76,7 @@ public class SelectionSortTest {
 	}
 
 	/**
-	 * Descending selection sort algorithm.
+	 * Descending selection sort algorithm. O(n²)
 	 * @param array Array to sort.
 	 */
 	private static void descendingSelectionSort(int[] array) {
@@ -99,15 +98,5 @@ public class SelectionSortTest {
 		int aux = array[index1];
 		array[index1] = array[index2];
 		array[index2] = aux;
-	}
-
-	/**
-	 * Print an array.
-	 * @param array Array to print.
-	 */
-	private static void printArray(int[] array) {
-		for (int i = 0; i < array.length; i++)
-			System.out.format("%5d", array[i]);
-		System.out.println();
 	}
 }

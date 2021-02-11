@@ -25,6 +25,8 @@ package ar.com.adriancordoba.test.console.algorithms.arraysearch.recursivebinary
 import java.util.Arrays;
 import java.util.Scanner;
 
+import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+
 /**
  * Recursive binary search algorithm test.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
@@ -34,18 +36,16 @@ public class RecursiveBinarySearchTest {
 	private static final int VALUES_LIMIT = 1000;
 
 	/**
-	 * Generate an array with random values, and search a key in it.
+	 * Gets an array with random values, and search a key in it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] array = new int[ARRAY_SIZE];
-		for (int i = 0; i < array.length; i++)
-			array[i] = (int) (Math.random() * VALUES_LIMIT);
+		int[] array = Utilities.generateArray(ARRAY_SIZE, VALUES_LIMIT);
 		Arrays.sort(array);
 
 		System.out.println("RECURSIVE BINARY SEARCH");
 		System.out.println("Generated and sorted array:");
-		printArray(array);
+		Utilities.printArray(array);
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the element to search: ");
@@ -60,7 +60,7 @@ public class RecursiveBinarySearchTest {
 	}
 
 	/**
-	 * Binary search algorithm.
+	 * Binary search algorithm. O(log n)
 	 * @param array The array where to search.
 	 * @param firstIndex First index to search.
 	 * @param lastIndex Last index to search,
@@ -82,15 +82,5 @@ public class RecursiveBinarySearchTest {
 			}
 		}
 		return index;
-	}
-
-	/**
-	 * Print an array.
-	 * @param array Array to print.
-	 */
-	private static void printArray(int[] array) {
-		for (int i = 0; i < array.length; i++)
-			System.out.format("%5d", array[i]);
-		System.out.println();
 	}
 }

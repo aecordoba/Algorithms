@@ -22,6 +22,8 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.insertionsort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+
 /**
  * Insertion sort algorithm test.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
@@ -37,18 +39,15 @@ public class InsertionSortTest {
 	private static Order sortOrder = Order.DESCENDING;
 
 	/**
-	 * Generate an array with random values, and sort it.
+	 * Gets an array with random values, and sort it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] array = new int[ARRAY_SIZE];
-
-		for (int i = 0; i < array.length; i++)
-			array[i] = (int) (Math.random() * VALUES_LIMIT);
+		int[] array = Utilities.generateArray(ARRAY_SIZE, VALUES_LIMIT);
 
 		System.out.println("INSERTION SORT");
 		System.out.println("Generated array:");
-		printArray(array);
+		Utilities.printArray(array);
 
 		switch (sortOrder) {
 			case ASCENDING:
@@ -60,11 +59,11 @@ public class InsertionSortTest {
 		}
 
 		System.out.println(sortOrder + " sorted array:");
-		printArray(array);
+		Utilities.printArray(array);
 	}
 
 	/**
-	 * Ascending insertion sort algorithm.
+	 * Ascending insertion sort algorithm. O(n²)
 	 * @param array Array to sort.
 	 */
 	private static void ascendingInsertionSort(int[] array) {
@@ -80,7 +79,7 @@ public class InsertionSortTest {
 	}
 
 	/**
-	 * Descending insertion sort algorithm.
+	 * Descending insertion sort algorithm. O(n²)
 	 * @param array Array to sort.
 	 */
 	private static void descendingInsertionSort(int[] array) {
@@ -93,15 +92,5 @@ public class InsertionSortTest {
 			}
 			array[index2 + 1] = key;
 		}
-	}
-
-	/**
-	 * Print an array.
-	 * @param array Array to print.
-	 */
-	private static void printArray(int[] array) {
-		for (int i = 0; i < array.length; i++)
-			System.out.format("%5d", array[i]);
-		System.out.println();
 	}
 }

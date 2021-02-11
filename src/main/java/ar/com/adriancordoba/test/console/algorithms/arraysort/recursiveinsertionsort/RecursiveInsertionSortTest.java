@@ -22,6 +22,8 @@
  */
 package ar.com.adriancordoba.test.console.algorithms.arraysort.recursiveinsertionsort;
 
+import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+
 /**
  * Recursive Insertion Sort algorithm test.
  * @author Adrián E. Córdoba [software.asia@gmail.com]
@@ -37,18 +39,15 @@ public class RecursiveInsertionSortTest {
 	private static Order sortOrder = Order.DESCENDING;
 
 	/**
-	 * Generate an array with random values, and sort it.
+	 * Gets an array with random values, and sort it.
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] array = new int[ARRAY_SIZE];
-
-		for (int i = 0; i < array.length; i++)
-			array[i] = (int) (Math.random() * VALUES_LIMIT);
+		int[] array = Utilities.generateArray(ARRAY_SIZE, VALUES_LIMIT);
 
 		System.out.println("RECURSIVE INSERTION SORT");
 		System.out.println("Generated array:");
-		printArray(array);
+		Utilities.printArray(array);
 
 		switch (sortOrder) {
 			case ASCENDING:
@@ -60,7 +59,7 @@ public class RecursiveInsertionSortTest {
 		}
 
 		System.out.println(sortOrder + " sorted array:");
-		printArray(array);
+		Utilities.printArray(array);
 	}
 
 	/**
@@ -99,15 +98,5 @@ public class RecursiveInsertionSortTest {
 			index2--;
 		}
 		array[index2 + 1] = key;
-	}
-
-	/**
-	 * Print an array.
-	 * @param array Array to print.
-	 */
-	private static void printArray(int[] array) {
-		for (int i = 0; i < array.length; i++)
-			System.out.format("%5d", array[i]);
-		System.out.println();
 	}
 }
