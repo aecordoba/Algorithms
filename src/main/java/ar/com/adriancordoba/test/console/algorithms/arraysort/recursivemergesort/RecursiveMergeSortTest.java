@@ -54,7 +54,7 @@ public class RecursiveMergeSortTest {
 	}
 
 	/**
-	 * Recursive merge sort algorithm.
+	 * Recursive merge sort algorithm. O(n log n)
 	 * @param array The array to sort.
 	 * @param low Low index in the array.
 	 * @param high High index in the array.
