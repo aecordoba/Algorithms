@@ -8,6 +8,7 @@
     
 - Array search:
     - Recursive binary search algorithm
+    - Linear search algorithm
 
 - Fibonacci series:
 	 - Recursive Fibonacci numbers generator algorithm
