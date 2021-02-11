@@ -4,6 +4,7 @@
     - Selection sort algorithm
     - Recursive insertion sort algorithm
     - Recursive quick sort algorithm
+    - Recursive merge sort algorithm
     
 - Array search:
     - Recursive binary search algorithm
