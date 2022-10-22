@@ -20,7 +20,7 @@
  * 		RecursiveFibonacciSeriesGeneratorTest.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Jan 28, 2021
  */
-package ar.com.adriancordoba.test.console.algorithms.fibonacciseries.recursivefibonaccinumbergenerator;
+package ar.com.adriancordoba.test.app.console.algorithms.fibonacciseries.recursivefibonaccinumbergenerator;
 
 /**
  * Recursive Fibonacci series generator test.

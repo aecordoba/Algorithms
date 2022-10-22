@@ -20,7 +20,7 @@
  * 		SortOrder.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Feb 11, 2021
  */
-package ar.com.adriancordoba.test.console.algorithms.common;
+package ar.com.adriancordoba.test.app.console.algorithms.common;
 
 /**
  * Define the two sort orders.

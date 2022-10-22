@@ -20,10 +20,10 @@
  * 		SelectionSortTest.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Dec 3, 2020
  */
-package ar.com.adriancordoba.test.console.algorithms.arraysort.selectionsort;
+package ar.com.adriancordoba.test.app.console.algorithms.arraysort.selectionsort;
 
-import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
-import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+import ar.com.adriancordoba.test.app.console.algorithms.common.SortOrder;
+import ar.com.adriancordoba.test.app.console.algorithms.common.Utilities;
 
 /**
  * Selection sort algorithm test.

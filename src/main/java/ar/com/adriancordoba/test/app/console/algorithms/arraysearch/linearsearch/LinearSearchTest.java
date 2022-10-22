@@ -20,11 +20,11 @@
  * 		LinearSearchTest.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Feb 11, 2021
  */
-package ar.com.adriancordoba.test.console.algorithms.arraysearch.linearsearch;
+package ar.com.adriancordoba.test.app.console.algorithms.arraysearch.linearsearch;
 
 import java.util.Arrays;
 
-import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+import ar.com.adriancordoba.test.app.console.algorithms.common.Utilities;
 
 /**
  * Linear search algorithm test.

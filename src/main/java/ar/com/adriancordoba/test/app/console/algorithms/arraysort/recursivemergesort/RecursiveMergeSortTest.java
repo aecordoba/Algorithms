@@ -20,10 +20,10 @@
  * 		RecursiveMergeSortTest.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Feb 9, 2021
  */
-package ar.com.adriancordoba.test.console.algorithms.arraysort.recursivemergesort;
+package ar.com.adriancordoba.test.app.console.algorithms.arraysort.recursivemergesort;
 
-import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
-import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+import ar.com.adriancordoba.test.app.console.algorithms.common.SortOrder;
+import ar.com.adriancordoba.test.app.console.algorithms.common.Utilities;
 
 /**
  * Recursive merge sort algorithm test.

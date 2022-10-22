@@ -20,10 +20,10 @@
  * 		RecursiveQuickSortTest.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Dec 5, 2020
  */
-package ar.com.adriancordoba.test.console.algorithms.arraysort.recursivequicksort;
+package ar.com.adriancordoba.test.app.console.algorithms.arraysort.recursivequicksort;
 
-import ar.com.adriancordoba.test.console.algorithms.common.SortOrder;
-import ar.com.adriancordoba.test.console.algorithms.common.Utilities;
+import ar.com.adriancordoba.test.app.console.algorithms.common.SortOrder;
+import ar.com.adriancordoba.test.app.console.algorithms.common.Utilities;
 
 /**
  * Recursive quick sort algorithm test.

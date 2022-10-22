@@ -20,7 +20,7 @@
  * 		Utilities.java
  *  Adrián E. Córdoba [software.asia@gmail.com]		Feb 9, 2021
  */
-package ar.com.adriancordoba.test.console.algorithms.common;
+package ar.com.adriancordoba.test.app.console.algorithms.common;
 
 import java.util.Scanner;
 
